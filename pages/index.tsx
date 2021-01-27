@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="http://github.com/ecorrales1979" />
+      <GitHubCorner projectUrl="http://github.com/ecorrales1979/aluraquiz" />
     </QuizBackground>
   )
 }
