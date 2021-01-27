@@ -1,0 +1,19 @@
+{
+  "bg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Digital_Background.jpg",
+  "title": "Meu Quiz",
+  "description": "Projeto de quiz para a imersão React + Styled components + Next.js da Alura",
+  "questions": [],
+  "external": [],
+  "theme": {
+    "colors": {
+      "primary": "#1769aa",
+      "secondary": "#00a152",
+      "mainBg": "#2196f3",
+      "contrastText": "#ededed",
+      "shadowText": "rgba(0, 0, 0, .7)",
+      "wrong": "#f44336",
+      "success": "#76ff03"
+    },
+    "borderRadius": "8px"
+  }
+}
