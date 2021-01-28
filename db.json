@@ -1,7 +1,8 @@
 {
   "bg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Digital_Background.jpg",
-  "title": "Meu Quiz",
+  "title": "Alura Quiz",
   "description": "Projeto de quiz para a imersão React + Styled components + Next.js da Alura",
+  "projectURL": "http://github.com/ecorrales1979/aluraquiz",
   "questions": [],
   "external": [],
   "theme": {
@@ -14,6 +15,6 @@
       "wrong": "#f44336",
       "success": "#76ff03"
     },
-    "borderRadius": "8px"
+    "borderRadius": "4px"
   }
 }

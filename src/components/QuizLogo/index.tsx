@@ -1,10 +1,11 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React from 'react'
+
+import { Container } from './styles'
 
 interface LogoProps {
   className?: string
 }
-
-import { Container } from './styles'
 
 const QuizLogo: React.FC<LogoProps> = ({ className }) => {
   return (
@@ -29,11 +30,11 @@ const QuizLogo: React.FC<LogoProps> = ({ className }) => {
         </clipPath>
       </defs>
     </Container>
-  );
+  )
 }
 
 // Logo.propTypes = {
 //   className: PropTypes.string.isRequired,
-// };
+// }
 
-export default QuizLogo;
+export default QuizLogo

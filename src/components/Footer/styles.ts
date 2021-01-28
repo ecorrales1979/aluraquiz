@@ -1,4 +1,4 @@
-import styled, { ThemeProps } from 'styled-components';
+import styled, { ThemeProps } from 'styled-components'
 
 import { Theme } from '../../dtos/ThemeDTO'
 
@@ -28,4 +28,4 @@ export const Container = styled.footer`
       text-decoration: underline;
     }
   }
-`;
+`

@@ -7,4 +7,4 @@ export const Container = styled.svg`
   @media screen and (max-width: 500px) {
     margin: 0;
   }
-`;
+`

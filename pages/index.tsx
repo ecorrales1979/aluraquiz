@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 import db from '../db.json'
 import QuizLogo from '../src/components/QuizLogo'
@@ -7,6 +8,8 @@ import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
+import Input from '../src/components/Input'
+import Button from '../src/components/Button'
 
 const QuizContainer = styled.div`
   width: 100%;
@@ -21,21 +24,38 @@ const QuizContainer = styled.div`
 `
 
 const Home: React.FC = () => {
+  const [name, setName] = useState<string>(null)
+  const router = useRouter()
+
+  const handleNameChange = useCallback((ev) => {
+    setName(ev.target.value)
+  }, [])
+
+  const handleFormSubmit = useCallback((ev) => {
+    router.push(`/quiz?name=${name}`)
+  }, [name])
+
   return (
-    <QuizBackground imageURL={db.bg}>
-      <QuizContainer>
-        <QuizLogo />
-        <Widget header={db.title}>
-          <p>{db.description}</p>
-        </Widget>
-        <Widget>
-          <h1>Quizes da galera!</h1>
-          <p>Lorem ipsum dolor sit amet...</p>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="http://github.com/ecorrales1979/aluraquiz" />
-    </QuizBackground>
+    <>
+      <QuizBackground imageURL={db.bg}>
+        <QuizContainer>
+          <QuizLogo />
+          <Widget header={db.title}>
+            <div>Teste seus conhecimentos</div>
+            <Input placeholder="Entre seu nome" onChange={handleNameChange} />
+            <Button type="button" onClick={handleFormSubmit} disabled={!name}>
+              Jogar {name}
+            </Button>
+          </Widget>
+          <Widget>
+            <h1>Quizes da galera!</h1>
+            <p>Lorem ipsum dolor sit amet...</p>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GitHubCorner projectUrl={db.projectURL} />
+      </QuizBackground>
+    </>
   )
 }
 

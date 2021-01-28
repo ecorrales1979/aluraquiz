@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container, Header, Content } from './styles';
+import { Container, Header, Content } from './styles'
 
 interface WidgetProps {
   header?: React.ReactNode
@@ -14,7 +14,9 @@ const Widget: React.FC<WidgetProps> = ({ header, children }) => {
           {header}
         </Header>
       }
-      <Content children={children} />
+      <Content>
+        {children}
+      </Content>
     </Container>
   )
 }

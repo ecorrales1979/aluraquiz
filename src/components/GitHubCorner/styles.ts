@@ -1,4 +1,4 @@
-import styled, { ThemeProps } from 'styled-components';
+import styled, { ThemeProps } from 'styled-components'
 
 import { Theme } from '../../dtos/ThemeDTO'
 
@@ -8,7 +8,7 @@ export const Container = styled.div`
   right: 0;
   border: 0;
   z-index: 20;
-`;
+`
 
 export const SVGWrapper = styled.svg`
   fill: ${({ theme }: ThemeProps<Theme>) => theme.colors.secondary};
@@ -34,4 +34,4 @@ export const SVGWrapper = styled.svg`
       animation:octocat-wave 560ms ease-in-out
     }
   }
-`;
+`

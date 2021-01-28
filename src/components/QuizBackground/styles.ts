@@ -1,4 +1,4 @@
-import styled, { ThemeProps } from 'styled-components';
+import styled, { ThemeProps } from 'styled-components'
 
 import { Theme } from '../../dtos/ThemeDTO'
 import { QuizBgProps } from './QuizBgProps'
@@ -19,7 +19,8 @@ export const Container = styled.div<QuizBgProps>`
       background-size: cover;
       background-position: center;
       background-image:
-        linear-gradient(transparent, ${({ theme }: ThemeProps<Theme>) => theme.colors.mainBg}),
+        linear-gradient(transparent, ${({ theme }: ThemeProps<Theme>) =>
+          theme.colors.mainBg}),
         url(${({ imageURL }) => imageURL});
       display: block;
       width: 100%;
@@ -36,4 +37,4 @@ export const Container = styled.div<QuizBgProps>`
       z-index: 10;
     }
   }
-`;
+`

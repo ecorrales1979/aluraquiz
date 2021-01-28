@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React from 'react'
 
 import { Container, SVGWrapper } from './styles'
 
@@ -17,7 +18,7 @@ const GitHubCorner: React.FC<GitHubCornerProps> = ({ projectUrl }) => {
         </SVGWrapper>
       </a>
     </Container>
-  );
+  )
 }
 
 export default GitHubCorner
