@@ -7,10 +7,9 @@ export const Container = styled.input`
   width: 100%;
   padding: 7px 15px;
   margin: 25px 0;
+  font-size: 14px;
   color: ${({ theme }: ThemeProps<Theme>) => theme.colors.contrastText};
-  border: 1px solid ${
-    ({ theme }: ThemeProps<Theme>) => theme.colors.contrastText
-  };
+  border: 1px solid ${({ theme }: ThemeProps<Theme>) => theme.colors.primary};
   border-radius: ${({ theme }: ThemeProps<Theme>) => theme.borderRadius};
   outline: none;
 

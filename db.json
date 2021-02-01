@@ -1,9 +1,69 @@
 {
-  "bg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Digital_Background.jpg",
+  "bg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Digital_Background.jpg/640px-Digital_Background.jpg",
   "title": "Alura Quiz",
-  "description": "Projeto de quiz para a imersão React + Styled components + Next.js da Alura",
+  "description": "Teste seus conhecimentos de TypeScript",
   "projectURL": "http://github.com/ecorrales1979/aluraquiz",
-  "questions": [],
+  "questions": [
+    {
+      "alternatives": [
+        "O TypeScript é um superset de JavaScript",
+        "O TypeScript é uma linguagem de programação",
+        "Todas as anteriores"
+      ],
+      "answer": 2,
+      "title": "Selecione a resposta correta:",
+      "description": "",
+      "image": ""
+    },
+    {
+      "alternatives": [
+        "Vercel",
+        "Microsoft",
+        "Oracle",
+        "GitHub"
+      ],
+      "answer": 1,
+      "title": "O TypeScript foi criado e é mantido por:",
+      "description": "",
+      "image": ""
+    },
+    {
+      "alternatives": [
+        "Java",
+        "C#",
+        "JavaScript",
+        "Todas as anteriores"
+      ],
+      "answer": 3,
+      "title": "O TypeScript foi inspirado por:",
+      "description": "",
+      "image": ""
+    },
+    {
+      "alternatives": [
+        ".ts",
+        ".tt",
+        ".js",
+        ".st"
+      ],
+      "answer": 0,
+      "title": "A extensão dos arquivos de TypeScript é:",
+      "description": "",
+      "image": ""
+    },
+    {
+      "alternatives": [
+        "Arrow functions",
+        "Métodos",
+        "Classes",
+        "Modules"
+      ],
+      "answer": 1,
+      "title": "Qual dessas funcionalidades não é suportada pelo TypeScript:",
+      "description": "",
+      "image": ""
+    }
+  ],
   "external": [],
   "theme": {
     "colors": {
