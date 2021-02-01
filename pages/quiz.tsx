@@ -29,11 +29,13 @@ const Quiz: React.FC = () => {
 
   useEffect(() => {
     setInterval(() => setLoading(false), 2000)
+
+    return () => {}
   }, [])
 
-  const handleSelection = (selectedIndex: number) => {
+  const handleSelection = useCallback((selectedIndex: number) => {
     setCurrentResponse(selectedIndex)
-  }
+  }, [])
 
   const handleSubmit = useCallback(() => {
     const question = questions[questionIndex]
