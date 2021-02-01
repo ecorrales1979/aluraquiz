@@ -1,7 +1,7 @@
 {
   "bg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Digital_Background.jpg/640px-Digital_Background.jpg",
-  "title": "Alura Quiz",
-  "description": "Teste seus conhecimentos de TypeScript",
+  "title": "Quiz de TypeScript #Alura",
+  "description": "Teste seus conhecimentos básicos de TypeScript",
   "projectURL": "http://github.com/ecorrales1979/aluraquiz",
   "questions": [
     {
