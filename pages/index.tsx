@@ -6,6 +6,7 @@ import QuizContainer from '../src/components/QuizContainer'
 import QuizLogo from '../src/components/QuizLogo'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import ExternalsWidget from '../src/components/ExternalsWidget'
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import Input from '../src/components/Input'
@@ -34,10 +35,7 @@ const Home: React.FC = () => {
             Jogar {name}
           </Button>
         </Widget>
-        <Widget>
-          <h1>Quizes da galera!</h1>
-          <p>Lorem ipsum dolor sit amet...</p>
-        </Widget>
+        <ExternalsWidget external={db.external} />
         <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl={db.projectURL} />

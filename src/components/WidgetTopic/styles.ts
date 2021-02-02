@@ -4,16 +4,15 @@ import { shade } from 'polished'
 
 import { Theme } from '../../dtos/ThemeDTO'
 
-export interface QuestionInputProps
+export interface WidgetTopicProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  alternative: string;
-  selected: boolean;
+  selected?: boolean;
   theme?: Theme;
 }
 
-export const Container = styled.a<QuestionInputProps>`
+export const Container = styled.a<WidgetTopicProps>`
   display: block;
-  background-color: ${(props: QuestionInputProps) =>
+  background-color: ${(props: WidgetTopicProps) =>
     props.selected ? props.theme.colors.secondary : props.theme.colors.primary};
   color: ${({ theme }: ThemeProps<Theme>) => theme.colors.contrastText};
   font-size: 14px;
@@ -28,7 +27,7 @@ export const Container = styled.a<QuestionInputProps>`
 
   &:focus,
   &:hover {
-    background-color: ${(props: QuestionInputProps) =>
+    background-color: ${(props: WidgetTopicProps) =>
       shade(
         0.2,
         props.selected

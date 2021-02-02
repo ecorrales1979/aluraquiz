@@ -1,20 +1,21 @@
 import React from 'react'
 
-import db from '../../../db.json'
+import { QuestionDTO } from '../../dtos/DatabaseDTO'
 import Widget from '../Widget'
 import Button from '../Button'
-import QuestionInput from '../QuestionInput'
+import WidgetTopic from '../WidgetTopic'
+import BackLinkArrow from '../BackLinkArrow'
 
 interface QuestionWidgetProps {
+  questions: QuestionDTO[]
   questionIndex: number
   currentResponse: number
   handleSelection: (id: number) => void
   handleSubmit: () => void
 }
 
-const questions = db.questions
-
 const QuestionWidget: React.FC<QuestionWidgetProps> = ({
+  questions,
   questionIndex,
   currentResponse,
   handleSelection,
@@ -24,19 +25,35 @@ const QuestionWidget: React.FC<QuestionWidgetProps> = ({
 
   return (
     <Widget
-      header={<h3>Pergunta {questionIndex + 1} de {questions.length}</h3>}
+      header={
+        <>
+          <BackLinkArrow href='/' />
+          <h3>Pergunta {questionIndex + 1} de {questions.length}</h3>
+        </>
+      }
     >
-      {question.image && <img src={question.image} />}
+      {question.image &&
+        <img
+          src={question.image}
+          alt="Pergunta"
+          style={{
+            width: '100%',
+            height: '150px',
+            objectFit: 'cover'
+          }}
+        />
+      }
       <div>{question.title}</div>
       {question.description && <p>{question.description}</p>}
-      {question.alternatives.map((alternative, index) =>
-        (<QuestionInput
+      {question.alternatives.map((alternative, index) => (
+        <WidgetTopic
           key={index}
           onClick={() => handleSelection(index)}
-          alternative={alternative}
           selected={index === currentResponse}
-        />)
-      )}
+        >
+            {alternative}
+        </WidgetTopic>
+      ))}
       <Button
         type="button"
         onClick={handleSubmit}

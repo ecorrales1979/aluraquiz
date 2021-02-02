@@ -17,7 +17,7 @@ const CongratsWidget: React.FC<ResultProps> = ({ name, responses, total }) => {
   return (
     <Widget>
       <Div>
-        Parabéns {name}! Você concluiu o Quiz.
+        Parabéns{name ? ` ${name}` : ''}! Você concluiu o Quiz.
       </Div>
       <Div>
         Você acertou {responses} de {total} perguntas.
